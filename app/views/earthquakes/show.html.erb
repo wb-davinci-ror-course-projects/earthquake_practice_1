@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @earthquake.time %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @earthquake.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @earthquake.longitude %>
+</p>
+
+<p>
+  <strong>Depth:</strong>
+  <%= @earthquake.depth %>
+</p>
+
+<p>
+  <strong>Mag:</strong>
+  <%= @earthquake.mag %>
+</p>
+
+<p>
+  <strong>Magtype:</strong>
+  <%= @earthquake.magtype %>
+</p>
+
+<p>
+  <strong>Nst:</strong>
+  <%= @earthquake.nst %>
+</p>
+
+<p>
+  <strong>Gap:</strong>
+  <%= @earthquake.gap %>
+</p>
+
+<p>
+  <strong>Dmin:</strong>
+  <%= @earthquake.dmin %>
+</p>
+
+<p>
+  <strong>Rms:</strong>
+  <%= @earthquake.rms %>
+</p>
+
+<p>
+  <strong>Net:</strong>
+  <%= @earthquake.net %>
+</p>
+
+<p>
+  <strong>Usgs ident:</strong>
+  <%= @earthquake.usgs_ident %>
+</p>
+
+<p>
+  <strong>Updated:</strong>
+  <%= @earthquake.updated %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @earthquake.place %>
+</p>
+
+<%= link_to 'Edit', edit_earthquake_path(@earthquake) %> |
+<%= link_to 'Back', earthquakes_path %>

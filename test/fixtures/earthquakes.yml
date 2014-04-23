@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2014-04-22 22:29:27
+  latitude: 9.99
+  longitude: 9.99
+  depth: 9.99
+  mag: MyString
+  magtype: MyString
+  nst: MyString
+  gap: MyString
+  dmin: MyString
+  rms: MyString
+  net: MyString
+  usgs_ident: MyString
+  updated: MyString
+  place: MyString
+
+two:
+  time: 2014-04-22 22:29:27
+  latitude: 9.99
+  longitude: 9.99
+  depth: 9.99
+  mag: MyString
+  magtype: MyString
+  nst: MyString
+  gap: MyString
+  dmin: MyString
+  rms: MyString
+  net: MyString
+  usgs_ident: MyString
+  updated: MyString
+  place: MyString

@@ -1,0 +1,73 @@
+<%= form_for(@earthquake) do |f| %>
+  <% if @earthquake.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@earthquake.errors.count, "error") %> prohibited this earthquake from being saved:</h2>
+
+      <ul>
+      <% @earthquake.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.datetime_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :depth %><br>
+    <%= f.text_field :depth %>
+  </div>
+  <div class="field">
+    <%= f.label :mag %><br>
+    <%= f.text_field :mag %>
+  </div>
+  <div class="field">
+    <%= f.label :magtype %><br>
+    <%= f.text_field :magtype %>
+  </div>
+  <div class="field">
+    <%= f.label :nst %><br>
+    <%= f.text_field :nst %>
+  </div>
+  <div class="field">
+    <%= f.label :gap %><br>
+    <%= f.text_field :gap %>
+  </div>
+  <div class="field">
+    <%= f.label :dmin %><br>
+    <%= f.text_field :dmin %>
+  </div>
+  <div class="field">
+    <%= f.label :rms %><br>
+    <%= f.text_field :rms %>
+  </div>
+  <div class="field">
+    <%= f.label :net %><br>
+    <%= f.text_field :net %>
+  </div>
+  <div class="field">
+    <%= f.label :usgs_ident %><br>
+    <%= f.text_field :usgs_ident %>
+  </div>
+  <div class="field">
+    <%= f.label :updated %><br>
+    <%= f.text_field :updated %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
