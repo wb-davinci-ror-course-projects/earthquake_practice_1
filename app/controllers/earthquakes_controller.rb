@@ -4,7 +4,7 @@ class EarthquakesController < ApplicationController
   # GET /earthquakes
   # GET /earthquakes.json
   def index
-    @earthquakes = Earthquake.all
+    @earthquakes = Earthquake.all.paginate(:page => params[:page])
     @earthquake_data_by_hour = @earthquakes.map{|earthquake| earthquake.time.hour}.inject(Hash.new(0)) {|h,i| h[i] += 1; h }
     @earthquake_data = @earthquakes.map{|earthquake| earthquake.mag.to_f.round(0)}.each_with_object(Hash.new(0)) { |mag,magnitudes| magnitudes[mag] += 1 }
     @earthquake_places = @earthquakes.map{|earthquake| convert(earthquake.place.split(',').last) }.each_with_object(Hash.new(0)) { |mag,magnitudes| magnitudes[mag] += 1 }

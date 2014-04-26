@@ -1,3 +1,9 @@
 // Place all the styles related to the earthquakes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.earthquakes_loading {
+  display: none;
+  margin: auto;
+  width: 150px;
+}

@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'byebug'
 gem 'chartkick'
 gem 'groupdate'
+gem 'will_paginate', '~> 3.0.5'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
