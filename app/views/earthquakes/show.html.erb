@@ -70,5 +70,10 @@
   <%= @earthquake.place %>
 </p>
 
+<p>
+  <strong>Event type:</strong>
+  <%= @earthquake.event_type %>
+</p>
+
 <%= link_to 'Edit', edit_earthquake_path(@earthquake) %> |
 <%= link_to 'Back', earthquakes_path %>

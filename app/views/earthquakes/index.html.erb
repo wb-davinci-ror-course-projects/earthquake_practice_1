@@ -1,8 +1,9 @@
 <h1>Listing earthquakes</h1>
 
-<%= bar_chart @earthquake_data, height: "1000px" %>
-<%= column_chart @earthquake_data, height: "1000px" %>
-<%= pie_chart @earthquake_data, height: "1000px" %>
+<%# pie_chart @earthquake_data %>
+<%# bar_chart @earthquake_data %>
+<%# line_chart @earthquake_data %>
+<%# geo_chart @earthquake_places %>
 
 <table>
   <thead>
@@ -21,6 +22,7 @@
       <th>Usgs ident</th>
       <th>Updated</th>
       <th>Place</th>
+      <th>Event type</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -42,6 +44,7 @@
         <td><%= earthquake.usgs_ident %></td>
         <td><%= earthquake.updated %></td>
         <td><%= earthquake.place %></td>
+        <td><%= earthquake.event_type %></td>
         <td><%= link_to 'Show', earthquake %></td>
         <td><%= link_to 'Edit', edit_earthquake_path(earthquake) %></td>
         <td><%= link_to 'Destroy', earthquake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
