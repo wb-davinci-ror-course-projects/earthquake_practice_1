@@ -14,9 +14,9 @@ class EarthquakesController < ApplicationController
   end
 
   def process_csv
-    number_of_earthquakes = Earthquake.import_csv(params[:file])
+    Resque.enqueue(CsvImportWorker, params[:file].path)
     redirect_to root_path,
-      notice: "#{number_of_earthquakes} earthquakes created"
+      notice: "#{params[:file].original_filename} queued for import"
   end
 
   # GET /earthquakes/1
